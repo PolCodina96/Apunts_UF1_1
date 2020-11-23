@@ -1,183 +1,165 @@
 # Apunts_UF1_1
 
-# Dillinger
+# Introducció:
 
-[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
+## Tipus de Software:
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+Hi ha tres tipus de software:
 
-Dillinger is a cloud-enabled, mobile-ready, offline-storage, AngularJS powered HTML5 Markdown editor.
+- **De sistema** (sistema operatiu, drivers)
+- **De aplicació** (Suite ofimàtic, Navegador, Edició de imatge, ...)
+- **De desenvolupament** (Editors, copiladors, interpretes,...)
 
-  - Type some Markdown on the left
-  - See HTML in the right
-  - Magic
+## Relació Hardware-Software:
 
-# New Features!
+- **Disc Dur:** guarda informació de forma permanent als arxius executables i els arxius de dades.
 
-  - Import a HTML file and watch it magically convert to Markdown
-  - Drag and drop images (requires your Dropbox account be linked)
+- **Memòria RAM:** emmagatzema de forma temporal el codi binari dels arxius executables i els arxius de dades necessaries.
 
+- **CPU:**  Llegeix i executa instruccions emmagatzamades en memòria RAM.
 
-You can also:
-  - Import and save files from GitHub, Dropbox, Google Drive and One Drive
-  - Drag and drop markdown and HTML files into Dillinger
-  - Export documents as Markdown, HTML and PDF
+- **E/S:** Agafa noves dades desde la entrada, es mostra els resultats, es llegeixen / guarden a disc...
 
-Markdown is a lightweight markup language based on the formatting conventions that people naturally use in email.  As [John Gruber] writes on the [Markdown site][df1]
+## Tipus de Codi:
 
-> The overriding design goal for Markdown's
-> formatting syntax is to make it as readable
-> as possible. The idea is that a
-> Markdown-formatted document should be
-> publishable as-is, as plain text, without
-> looking like it's been marked up with tags
-> or formatting instructions.
+- **Codi font:** Arxiu de text llegible escrit en un llenguatge de programació.
+- **Codi objecte:** (intermedi) Arxiu binari no executable.
+- **Codi executable:** Arxiu binari executable.
 
-This text you see here is *actually* written in Markdown! To get a feel for Markdown's syntax, type some text into the left window and watch the results in the right.
+# Cicle de vida del software:
 
-### Tech
+## Ingeniería de software:
 
-Dillinger uses a number of open source projects to work properly:
+Disciplina que estudia els principis i metodologías per el desenvolupament i manteniment de sistema software.
 
-* [AngularJS] - HTML enhanced for web apps!
-* [Ace Editor] - awesome web-based text editor
-* [markdown-it] - Markdown parser done right. Fast and easy to extend.
-* [Twitter Bootstrap] - great UI boilerplate for modern web apps
-* [node.js] - evented I/O for the backend
-* [Express] - fast node.js network app framework [@tjholowaychuk]
-* [Gulp] - the streaming build system
-* [Breakdance](https://breakdance.github.io/breakdance/) - HTML to Markdown converter
-* [jQuery] - duh
+- Alguns autors consideran que **desenvolupament de software** és un termini més apropiat que **ingeniería de software**.
 
-And of course Dillinger itself is open source with a [public repository][dill]
- on GitHub.
+## Desenvolupament de Software:
 
-### Installation
+- **ANÀLISI**
 
-Dillinger requires [Node.js](https://nodejs.org/) v4+ to run.
+    Es determina i defineix la necessitat del client i s'especifica els requisits que s'han de cumplir.
 
-Install the dependencies and devDependencies and start the server.
-
-```sh
-$ cd dillinger
-$ npm install -d
-$ node app
-```
-
-For production environments...
-
-```sh
-$ npm install --production
-$ NODE_ENV=production node app
-```
-
-### Plugins
-
-Dillinger is currently extended with the following plugins. Instructions on how to use them in your own application are linked below.
-
-| Plugin | README |
-| ------ | ------ |
-| Dropbox | [plugins/dropbox/README.md][PlDb] |
-| GitHub | [plugins/github/README.md][PlGh] |
-| Google Drive | [plugins/googledrive/README.md][PlGd] |
-| OneDrive | [plugins/onedrive/README.md][PlOd] |
-| Medium | [plugins/medium/README.md][PlMe] |
-| Google Analytics | [plugins/googleanalytics/README.md][PlGa] |
+  - Ha de ser completa i sense omisions.
+  - Ser concisa i sense trivialitats.
+  - Ser entedible per el client
+  - Separar requisits funcionals i no funcionals
+  - Fixar criteris de validació
 
 
-### Development
+- **DISENY**
 
-Want to contribute? Great!
+  - Es descompon i s'organitza el sistema en elements components que poden ser desenvolupats per separat.
 
-Dillinger uses Gulp + Webpack for fast developing.
-Make a change in your file and instantaneously see your updates!
+  - Les activitats habituals són les següents:
 
-Open your favorite Terminal and run these commands.
+  - Diseny arquitectónic
+  - Diseny detallat
+  - Diseny de dades
+  - Diseny de interfície
 
-First Tab:
-```sh
-$ node app
-```
+- **CODIFICACIÓ**
 
-Second Tab:
-```sh
-$ gulp watch
-```
+  - S'escriu el codi font de cada component.
+  - Poden utilitzar-se diferents llenguatges informàtics:
+    - **LLenguatges de programació:** C, C++, Java, Javascript, ...
+    - **LLenguatges d'un altre tipus:** HTML, XML, JSON, ...
 
-(optional) Third:
-```sh
-$ karma test
-```
-#### Building for source
-For production release:
-```sh
-$ gulp build --prod
-```
-Generating pre-built zip archives for distribution:
-```sh
-$ gulp build dist --prod
-```
-### Docker
-Dillinger is very easy to install and deploy in a Docker container.
+- **PROVAS**
 
-By default, the Docker will expose port 8080, so change this within the Dockerfile if necessary. When ready, simply use the Dockerfile to build the image.
+  - El principal objectiu de les proves te que ser conseguir que el programa funcioni incorrectement i que es descubreixin defectes.
 
-```sh
-cd dillinger
-docker build -t joemccann/dillinger:${package.json.version} .
-```
-This will create the dillinger image and pull in the necessary dependencies. Be sure to swap out `${package.json.version}` with the actual version of Dillinger.
+  - Tenim que sometre el programa al màxim número de situacions diferents.
 
-Once done, run the Docker image and map the port to whatever you wish on your host. In this example, we simply map port 8000 of the host to port 8080 of the Docker (or whatever port was exposed in the Dockerfile):
+- **MANTENIMENT**
 
-```sh
-docker run -d -p 8000:8080 --restart="always" <youruser>/dillinger:${package.json.version}
-```
+  - Durant l'explotació del sistema software es necessari realitzar canvis ocasionals.
 
-Verify the deployment by navigating to your server address in your preferred browser.
+  - Per això s'ha de tornar a fer part del treball realitzat en las fases previas.
 
-```sh
-127.0.0.1:8000
-```
+  - Tipus de manteniment:
+    - **Correctiu:** Es correigeixen defectes.
+    - **Perfectiu:** Es millora la funcionalitat.
+    - **Evolutiu:** S'afageix funcionalitats novas.
+    - **Adaptatiu:** S'adapta a nous entorns.
 
-#### Kubernetes + Google Cloud
+## Models de desenvolupament de software:
 
-See [KUBERNETES.md](https://github.com/joemccann/dillinger/blob/master/KUBERNETES.md)
+- **Models clàssics (predicatius):**
+  - Model en cascada
+  - Model en V
+- **Model de construcció de prototips**
+- **Model evolutius o incrementals**
+  - Model en espiral(iteratius)
+  - Metodologías ágils (adaptatius)
+
+### Model en cascada:
+
+![](assets/cascada.png)
+- Model de major atiguitat.
+- Identifica las fases principals del desenvolupament de software.
+- Las fases han de realitzar-se en el ordre correcte.
+- El resultat de una fase en l'entrada de la següent fase.
+- És un model bastant rígid que s'adapta malament al canvi continu de especificacions.
+- Existeixen diferents variants amb major o menor cantitat d'activitats.
+
+### Model en V:
+
+![](assets/v.png)
+- Model molt semblant al model cascada.
+- Visió jerarquica amb diferents nivells.
+- Els nivells superiors indican major abstracció.
+- Els nivells inferiors indican major nivell de detall.
+- El resultat de una fase es la entrada de la següent fase.
+- existeixen diferents variants amb major o menor cantitat d'activitats.
+
+### Prototips:
+
+- Sobint els requisits no estàn especificats clarament:
+  - per no existir experiència prèvia.
+  - per omisió o falta de concreació del usuari/client
+![](assets/prototips.png)
+
+- Procés:
+  - Es crea un prototip durant la **fase d'anàlisi** i es prova per l'usuari/client per refinar els requisits del software a desenvolupar.
+  - Es repeteix el pas anterior las vegades necessaries.
+
+- Tipus de prototips:
+  - **Prototips ràpids**
+    - El prototip pot estar desenvolupat utilitzan un altre llenguatge i/o eines.
+  - **Prototips evolutius**
+    - El prototip està dissenyat en el mateix llenguatge i eines del projecte.
+    - El prototip s'utilitza com a base per a desenvolupar el projecte.
 
 
-### Todos
+### Model en espiral:
 
- - Write MORE Tests
- - Add Night Mode
+- Desenvolupat per Boehm en 1988.
+- L'activitat **d'ingeniería**correspon a las fases dels models clàssics: anàlisi, diseny, codificació,...
+![](assets/espiral.png)
 
-License
-----
+**APLICAT A LA PROGRAMACIÓ ORIENTADA A OBJECTES**
 
-MIT
+- En l'activitat de **ingeniería** es dona gran importància a la reutilització de codi.
+![](assets/espiral2.png)
 
+### Metodologías àgils
 
-**Free Software, Hell Yeah!**
+- Són mètodes de ingeniería del software basats en el desenvolupament iteratiu e incremental.
+- El treball es realitza mitjançant la col·laboració d'equips organitzats i disciplinats.
+- Les metodologías més conegudes són:
+  - Kanban
+  - Scrum
+  - XP (eXtreme Programming)
 
-[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
+#### KANBAN:
 
+- Tambè conegut per sistema de tarjes.
+- Desenvolupat per Toyota per la industria de fabricació de productes.
+- enfocat a entregar el màxim valor per els clients.
+![](assets/kanban.png)
 
-   [dill]: <https://github.com/joemccann/dillinger>
-   [git-repo-url]: <https://github.com/joemccann/dillinger.git>
-   [john gruber]: <http://daringfireball.net>
-   [df1]: <http://daringfireball.net/projects/markdown/>
-   [markdown-it]: <https://github.com/markdown-it/markdown-it>
-   [Ace Editor]: <http://ace.ajax.org>
-   [node.js]: <http://nodejs.org>
-   [Twitter Bootstrap]: <http://twitter.github.com/bootstrap/>
-   [jQuery]: <http://jquery.com>
-   [@tjholowaychuk]: <http://twitter.com/tjholowaychuk>
-   [express]: <http://expressjs.com>
-   [AngularJS]: <http://angularjs.org>
-   [Gulp]: <http://gulpjs.com>
+#### SCRUM:
 
-   [PlDb]: <https://github.com/joemccann/dillinger/tree/master/plugins/dropbox/README.md>
-   [PlGh]: <https://github.com/joemccann/dillinger/tree/master/plugins/github/README.md>
-   [PlGd]: <https://github.com/joemccann/dillinger/tree/master/plugins/googledrive/README.md>
-   [PlOd]: <https://github.com/joemccann/dillinger/tree/master/plugins/onedrive/README.md>
-   [PlMe]: <https://github.com/joemccann/dillinger/tree/master/plugins/medium/README.md>
-   [PlGa]: <https://github.com/RahulHP/dillinger/blob/master/plugins/googleanalytics/README.md>
+- Model de desenvolupament incremental.
+
