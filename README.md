@@ -159,7 +159,4 @@ Disciplina que estudia els principis i metodologías per el desenvolupament i ma
 - enfocat a entregar el màxim valor per els clients.
 ![](assets/kanban.png)
 
-#### SCRUM:
-
-- Model de desenvolupament incremental.
 
