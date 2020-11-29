@@ -1,5 +1,3 @@
-# Apunts_UF1_1
-
 # Introducció:
 
 ## Tipus de Software:
@@ -159,4 +157,137 @@ Disciplina que estudia els principis i metodologías per el desenvolupament i ma
 - enfocat a entregar el màxim valor per els clients.
 ![](assets/kanban.png)
 
+#### SCRUM:
 
+- Model de desenvolupament incremental.
+- Iteracions **(sprint) regulars** cada 2, 3 o 4 semanas.
+- Al finalizar cada iteració s'obté una **entrega parcial utilizable por el client**.
+
+![](assets/scrum.png)
+
+### ROLES PRINCIPALES:
+
+**Product Owner** Es "la voz del cliente". Define criterios de aceptación y asegura de que se cumplan.
+
+**Scrum Master** Asegura que se sigue la metodología Scrum. Motiva y facilita el trabajo del equipo.
+
+**Team** Equipo de desarrollo auto-organizado y multifuncional. Entre 6 y 10 miembros.
+
+## XP (PROGRAMACIÓN EXTREMA):
+
+### VALORES:
+
+- Simplicidad
+- Comunicación
+- Retroalimentación
+- Valentía o coraje
+- Respeto o humildad
+
+### CARACTERÍSTIQUES:
+
+- Diseño sencillo
+- Pequeñas mejoras continuas
+- Pruebas y refactorización
+- Integración continua
+- **Programación por parejas**
+- **El cliente se integra en el equipo de desarrollo**
+- Propiedad del código compartida
+- Estándares de codificación
+- 40 horas semanales
+
+### LLENGUATGE DE PROGRAMACIÓ:
+
+Para obtener código binario ejecutable tenemos 2 opciones:
+
+- Compilar
+- Interpretar
+
+### PROCESO DE COPILACIÓN / INTERPRETACIÓN
+
+La compilación/interpretación del código fuente se lleva a cabo en dos fases:
+- Análisis léxico
+- Análisis sintáctico
+- Si no existen errores, se genera el código objeto correspondiente.
+- Un código fuente correctamente escrito no significa que funcione según lo deseado.
+- No se realiza un análisis semántico.
+
+### LENGUAJES COMPILADOS
+
+
+- Ejemplos: C, C++
+- Principal ventaja: Ejecución muy eficiente.
+- Principal desventaja: Es necesario compilar cada vez que el código fuente es modificado.
+
+### LENGUAJES INTERPRETADOS
+
+- Ejemplos: PHP, Javascript
+- Principal ventaja: El código fuente se interpreta directamente.
+- Principal desventaja: Ejecución menos eficiente.
+
+### JAVA
+
+- Lenguajes compilado e interpretado.
+- El código fuente Java se compila y se obtiene un código binario intermedio denominado **bytcode.**
+- Despúes este **bytcode** se interpreta para ejecutarlo.
+
+### JAVA (II)
+
+- Ventajas:
+  - Estructurado y orientado a objetos
+  - Relativamente fácil de aprender
+  - Buena documentación y base de usuarios
+
+- Desventajas
+  - Menos eficiente que los lenguajes copilados
+
+### TIPOS
+
+- Según la forma en la que operan:
+  - **Declarativos:** indicamos el resultado
+  - **Imperativos:** idicamos los pasos a seguir para obtener un resultado.
+
+### TIPOS (II)
+
+- Tipos de **lenguajes declarativos**:
+  - **Lógicos:** Utilizan reglas. EJ: Prolog.
+  - **Funcionales:** Utilizan funciones. Ej: Lisp, Haskell
+  - **Algebraicos:** Utilizan sentencias. Ej: SQL
+- Normalmente son lenguajes interpretados.
+
+### TIPOS (III)
+
+- Tipos de lenguajes imperativos:
+  - Estructurados: C
+  - Orientados a objetos: Java
+  - Multiparadigma: C++, Javascript
+- Los lenguajes orientados a objetos son también lenguajes estructurados.
+- Muchos de estos lenguajes son compilados.
+
+### TIPOS (IV)
+
+- Tipos de lenguajes según nivel de abstracción:
+ - Bajo nivel: ensamblador
+ - Medio nivel: C
+ - Alto nivel: C++, Java
+
+### EVOLUCIÓN
+
+- Código binario
+- Ensamblador
+- Lenguajes estructurados
+- Lenguajes orientados a objetos
+
+### HISTORIA
+
+![](assets/historia.png)
+
+### CRITERIOS PARA LA SELECCIÓN DE UN LENGUAJES
+
+- Campo de aplicación
+- Experiencia previa
+- Herramientas de desarrollo
+- Documentación disponible
+- Base de usuarios
+- Reusabilidad
+- Portabilidad
+- Imposición del cliente
